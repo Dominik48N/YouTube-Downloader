@@ -19,5 +19,10 @@ def downloadYouTubeVideo():
 if __name__ == "__main__":
     video_url = input("What is the YouTube video URL? ")
     download_path = input("Please enter the path in which the downloaded YouTube video should be played. ")
+    video_format = input("In which format do you want to download the video? (MP3 or MP4) ")
+
+    if video_format.lower() != "mp4" and video_format.lower() != "mp3":
+        print("The video format heard is not available. Please also use mp3 or mp4.")
+        pass
 
     downloadYouTubeVideo()
